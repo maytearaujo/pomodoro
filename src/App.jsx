@@ -1,13 +1,17 @@
-import { useState } from 'react'
-import PomodoroTimer from './components/PomodoroTimer'
+import PomodoroTimer from "./components/PomodoroTimer";
+
+import { ChakraProvider, CSSReset, Box, Text } from "@chakra-ui/react";
 
 function App() {
-
   return (
-    <>
-    <PomodoroTimer />
-    </>
-  )
+    <ChakraProvider>
+      <CSSReset />
+      <Box>
+        <Text textAlign={"center"} fontSize="xl" mt="4">Pomodoro</Text>
+        <PomodoroTimer />
+      </Box>
+    </ChakraProvider>
+  );
 }
 
-export default App
+export default App;
